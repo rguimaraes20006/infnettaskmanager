@@ -1,7 +1,8 @@
-import React, { lazy } from 'react'
+import React, { lazy, useEffect } from 'react'
 import { Navigate, useLocation } from 'react-router-dom'
 import NoHeader from '../Layouts/NoHeader'
 import MainLayout from '../Layouts/Main'
+
 
 const Login = lazy(() => import('../Pages/Login'))
 const Register = lazy(() => import('../Pages/Register'))
@@ -12,6 +13,8 @@ const NotFound = () => {
   const location = useLocation()
   return <Navigate to="/" state={{ from: location }} replace />
 }
+
+
 
 export default [
   {
